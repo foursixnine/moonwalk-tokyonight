@@ -1,4 +1,8 @@
 ---
 ---
 
-@import "main";
+$theme-palette: "{{ site.theme_config.palette | default: 'moon' }}";
+
+@import "tokyonight";
+@import "list";
+@import "syntax";

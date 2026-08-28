@@ -37,7 +37,7 @@ theme_config:
   palette: moon      # current Tokyo Night palette
 ```
 
-The theme packages `404.html`, `search.json`, and a compatibility `assets/css/style.css` entrypoint so search, themed 404 support, and legacy stylesheet references work out of the box.
+The theme packages `404.html`, `search.json`, and a compatibility `assets/css/style.css` entrypoint so search, themed 404 support, and legacy stylesheet references work out of the box, including on the older GitHub Pages Sass stack.
 
 ## Notes
 
