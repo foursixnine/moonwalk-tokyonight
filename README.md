@@ -1,23 +1,13 @@
 # Moonwalk Tokyo Night
 
-A minimal Jekyll theme adapted for clean remote-theme usage and styled around the Tokyo Night palette system.
+A minimal Jekyll theme based on moonwalk by @abhinavs compatible with `jekyll-remote-theme` using [Tokyo Night](https://tokyonight.org/) as a color palette (specifically `moon` variant).
 
 ## Install
 
-### GitHub Pages / remote-theme consumer
+### Using with GitHub Pages via `jekyll-remote-theme` plugin:
 
-If your site uses the `github-pages` gem, it is pinned to the GitHub Pages Jekyll stack (currently Jekyll `3.10.0`). This theme is kept compatible with that stack.
-
-In your site’s `Gemfile`, keep `github-pages` and add `jekyll-remote-theme` if needed:
-
-```ruby
-source "https://rubygems.org"
-
-gem "github-pages", "~> 232", group: :jekyll_plugins
-gem "jekyll-remote-theme", group: :jekyll_plugins
-```
-
-In your site’s `_config.yml`:
+If your site uses the `github-pages` gem or you publish via GitHub Pages, it should be enough to have this
+in your site’s `_config.yml`:
 
 ```yml
 remote_theme: foursixnine/moonwalk-tokyonight
@@ -28,6 +18,18 @@ plugins:
   - jekyll-seo-tag
 ```
 
+### Might not be needed (ymmv, but I haven't yested yet)
+
+In your site’s `Gemfile`, keep `github-pages` and add `jekyll-remote-theme` if needed:
+
+```ruby
+source "https://rubygems.org"
+
+gem "github-pages", "~> 232", group: :jekyll_plugins
+gem "jekyll-remote-theme", group: :jekyll_plugins
+```
+
+
 Optional theme settings:
 
 ```yml
@@ -36,8 +38,6 @@ theme_config:
   appearance_toggle: true
   palette: moon      # current Tokyo Night palette
 ```
-
-The theme packages `404.html`, `search.json`, and a compatibility `assets/css/style.css` entrypoint so search, themed 404 support, and legacy stylesheet references work out of the box, including on the older GitHub Pages Sass stack.
 
 ## Notes
 
@@ -50,11 +50,11 @@ The theme packages `404.html`, `search.json`, and a compatibility `assets/css/st
 
 ### Theme repository
 
-This repository can be developed locally with a newer Ruby/Bundler toolchain, but the shipped theme is intentionally kept compatible with the GitHub Pages consumer stack.
-
-Use the included `Gemfile` for local development:
+Use the included `Gemfile` for local development, `local-dev-environment.sh` has some other environment variables that
+might help with development of the theme.
 
 ```sh
 bin/bootstrap
 bin/start
 ```
+
