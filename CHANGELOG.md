@@ -3,7 +3,7 @@
 ## Unreleased
 
 ### Changed
-- Renamed the theme from Moonwalk to Tokyo Night for remote-theme-first usage
+- Renamed the theme from Tokyo Night to Moonwalk Tokyo Night (`moonwalk-tokyonight`) for clearer lineage and package naming
 - Switched local development dependency management to the `Gemfile` instead of `gemspec` loading through Bundler
 - Packaged `404.html` and `search.json` with the theme for remote-theme consumers
 - Simplified `_config.yml` to theme defaults instead of demo-site identity
@@ -12,6 +12,7 @@
 
 
 ### Added
+- `TODO.md` to track remaining Tokyo Night palette work beyond the current Moon variant
 - GitHub Markdown Alerts (admonitions) support - NOTE, TIP, IMPORTANT, WARNING, CAUTION
 - Light mode syntax highlighting with proper contrast
 - Tag archive page with clickable tags in posts

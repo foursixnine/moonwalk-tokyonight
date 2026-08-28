@@ -3,6 +3,6 @@
 
 $theme-palette: "{{ site.theme_config.palette | default: 'moon' }}";
 
-@import "tokyonight";
+@import "moonwalk-tokyonight";
 @import "list";
 @import "syntax";

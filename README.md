@@ -1,4 +1,4 @@
-# Tokyo Night
+# Moonwalk Tokyo Night
 
 A minimal Jekyll theme adapted for clean remote-theme usage and styled around the Tokyo Night palette system.
 
@@ -20,7 +20,7 @@ gem "jekyll-remote-theme", group: :jekyll_plugins
 In your site’s `_config.yml`:
 
 ```yml
-remote_theme: foursixnine/tokyonight
+remote_theme: foursixnine/moonwalk-tokyonight
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
@@ -42,6 +42,7 @@ The theme packages `404.html`, `search.json`, and a compatibility `assets/css/st
 ## Notes
 
 - This theme is based on the original [Moonwalk](https://github.com/abhinavs/moonwalk) theme by Abhinav Saxena.
+- This adaptation is published as `moonwalk-tokyonight`.
 - Attribution to the original author is preserved in the codebase and this README.
 - This update was assisted by GPT-5.4 via Zed’s coding agent tooling.
 

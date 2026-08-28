@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    if: github.repository == 'foursixnine/tokyonight'
+    if: github.repository == 'foursixnine/moonwalk-tokyonight'
     runs-on: ubuntu-latest
     environment: rubygems
     permissions:
@@ -25,5 +25,5 @@ jobs:
 
       - name: Build and push gem
         run: |
-          gem build tokyonight.gemspec
-          gem push tokyonight-*.gem
+          gem build moonwalk-tokyonight.gemspec
+          gem push moonwalk-tokyonight-*.gem
