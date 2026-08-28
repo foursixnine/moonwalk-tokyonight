@@ -24,7 +24,7 @@ theme_config:
   palette: moon      # current Tokyo Night palette
 ```
 
-The theme packages `404.html` and `search.json` so search and themed 404 support work out of the box.
+The theme packages `404.html`, `search.json`, and a compatibility `assets/css/style.css` entrypoint so search, themed 404 support, and legacy stylesheet references work out of the box.
 
 ## Notes
 
