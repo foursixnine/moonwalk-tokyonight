@@ -23,7 +23,7 @@
   <link rel="shortcut icon" href="{{ "/assets/images/favicon/favicon.ico" | relative_url }}">
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="msapplication-config" content="{{ "/assets/images/favicon/browserconfig.xml" | relative_url }}">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="{% if site.theme_config.palette == 'moon' %}#222436{% elsif site.theme_config.palette == 'day' %}#e6e7ed{% else %}#222436{% endif %}">
   <!-- Favicon -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">

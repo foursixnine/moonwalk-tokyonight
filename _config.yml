@@ -9,7 +9,7 @@ twitter:
 
 theme_config:
   appearance: "dark" # can be "light", "dark" or "auto"
-  palette: "moon" # currently supported: moon
+  palette: "moon" # currently supported: moon, groundwork added for day/full Tokyo Night support
   appearance_toggle: true # if appearance can be switched by user
   date_format: "%Y-%m-%d" # customize how date is formatted
   show_description: true # show blog description

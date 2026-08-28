@@ -1,6 +1,10 @@
 ---
 ---
 
-@use "tokyonight";
+$theme-palette: "{{ site.theme_config.palette | default: 'moon' }}";
+
+@use "tokyonight" with (
+  $theme-palette: $theme-palette
+);
 @use "list";
 @use "syntax";

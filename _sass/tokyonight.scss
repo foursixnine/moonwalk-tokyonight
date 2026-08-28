@@ -1,3 +1,32 @@
+$tokyonight-moon-bg: #222436;
+$tokyonight-moon-bg-secondary: #2a2e45;
+$tokyonight-moon-bg-subtle: #1e2030;
+$tokyonight-moon-headings: #c8d3f5;
+$tokyonight-moon-text: #b4c0e8;
+$tokyonight-moon-text-secondary: #7a88cf;
+$tokyonight-moon-links: #82aaff;
+$tokyonight-moon-highlight: #2d3f76;
+$tokyonight-moon-code-text: #86e1fc;
+$tokyonight-moon-share-text: #a9b8e8;
+$tokyonight-moon-border: #3b4261;
+$tokyonight-moon-border-subtle: #2f3655;
+$tokyonight-moon-code-bg: #1b1d2b;
+$tokyonight-moon-code-border: #2f3655;
+$tokyonight-day-bg: #e6e7ed;
+$tokyonight-day-bg-secondary: #dfe2ea;
+$tokyonight-day-bg-subtle: #f2f3f8;
+$tokyonight-day-headings: #1f2335;
+$tokyonight-day-text: #3760bf;
+$tokyonight-day-text-secondary: #6172b0;
+$tokyonight-day-links: #2e7de9;
+$tokyonight-day-highlight: #d5d6db;
+$tokyonight-day-code-text: #9854f1;
+$tokyonight-day-share-text: #6172b0;
+$tokyonight-day-border: #c4c8da;
+$tokyonight-day-border-subtle: #d5d8e6;
+$tokyonight-day-code-bg: #f2f3f8;
+$tokyonight-day-code-border: #d5d8e6;
+
 :root {
   --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
@@ -79,6 +108,8 @@ div.highlighter-rouge pre code, pre code.highlighter-rouge {
   display: block;
   overflow-x: auto;
   padding: 1em;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
 }
 // Language label, derived from rouge's language-* class via JS (see code_copy.html)
 .code-lang {
@@ -120,48 +151,88 @@ img {
   border-radius: 0.5em;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-@mixin light-appearance {
+@mixin light-appearance($palette: "moon") {
   html, body {
-      --bg: #fcfcfc;
-      --bg-secondary: #f1f2f4;
-      --bg-subtle: #f6f7f8;
-      --headings: #0f172a;
-      --text: #2b2f36;
-      --text-secondary: #5b6470;
-      --links: #4f46e5;
-      --highlight: #FFECB2;
-      --code-text: #9D174D;
-      --share-text: #999;
-      --border: rgba(15, 23, 42, 0.08);
-      --border-subtle: rgba(15, 23, 42, 0.05);
+      @if $palette == "day" {
+        --bg: #{$tokyonight-day-bg};
+        --bg-secondary: #{$tokyonight-day-bg-secondary};
+        --bg-subtle: #{$tokyonight-day-bg-subtle};
+        --headings: #{$tokyonight-day-headings};
+        --text: #{$tokyonight-day-text};
+        --text-secondary: #{$tokyonight-day-text-secondary};
+        --links: #{$tokyonight-day-links};
+        --highlight: #{$tokyonight-day-highlight};
+        --code-text: #{$tokyonight-day-code-text};
+        --share-text: #{$tokyonight-day-share-text};
+        --border: #{$tokyonight-day-border};
+        --border-subtle: #{$tokyonight-day-border-subtle};
+        --code-bg: #{$tokyonight-day-code-bg};
+        --code-border: #{$tokyonight-day-code-border};
+      } @else {
+        --bg: #fcfcfc;
+        --bg-secondary: #f1f2f4;
+        --bg-subtle: #f6f7f8;
+        --headings: #0f172a;
+        --text: #2b2f36;
+        --text-secondary: #5b6470;
+        --links: #4f46e5;
+        --highlight: #FFECB2;
+        --code-text: #9D174D;
+        --share-text: #999;
+        --border: rgba(15, 23, 42, 0.08);
+        --border-subtle: rgba(15, 23, 42, 0.05);
+        --code-bg: #f6f8fa;
+        --code-border: rgba(15, 23, 42, 0.08);
+      }
   }
 }
 // -------------- THEME SWITCHER -------------- //
-@mixin dark-appearance {
+@mixin dark-appearance($palette: "moon") {
   html, body  {
-      --headings: #e6edf3;
-      --links: #91A7FF;
-      --highlight: #41C7C7;
-      --bg: #15161d;
-      --bg-secondary: #23242f;
-      --bg-subtle: #1c1d26;
-      --text: #c4ccd6;
-      --text-secondary: #8b94a3;
-      --code-text: #91A7FF;
-      --share-text: #C4C4C4;
-      --border: rgba(255, 255, 255, 0.08);
-      --border-subtle: rgba(255, 255, 255, 0.05);
+      @if $palette == "moon" {
+        --headings: #{$tokyonight-moon-headings};
+        --links: #{$tokyonight-moon-links};
+        --highlight: #{$tokyonight-moon-highlight};
+        --bg: #{$tokyonight-moon-bg};
+        --bg-secondary: #{$tokyonight-moon-bg-secondary};
+        --bg-subtle: #{$tokyonight-moon-bg-subtle};
+        --text: #{$tokyonight-moon-text};
+        --text-secondary: #{$tokyonight-moon-text-secondary};
+        --code-text: #{$tokyonight-moon-code-text};
+        --share-text: #{$tokyonight-moon-share-text};
+        --border: #{$tokyonight-moon-border};
+        --border-subtle: #{$tokyonight-moon-border-subtle};
+        --code-bg: #{$tokyonight-moon-code-bg};
+        --code-border: #{$tokyonight-moon-code-border};
+      } @else {
+        --headings: #{$tokyonight-moon-headings};
+        --links: #{$tokyonight-moon-links};
+        --highlight: #{$tokyonight-moon-highlight};
+        --bg: #{$tokyonight-moon-bg};
+        --bg-secondary: #{$tokyonight-moon-bg-secondary};
+        --bg-subtle: #{$tokyonight-moon-bg-subtle};
+        --text: #{$tokyonight-moon-text};
+        --text-secondary: #{$tokyonight-moon-text-secondary};
+        --code-text: #{$tokyonight-moon-code-text};
+        --share-text: #{$tokyonight-moon-share-text};
+        --border: #{$tokyonight-moon-border};
+        --border-subtle: #{$tokyonight-moon-border-subtle};
+        --code-bg: #{$tokyonight-moon-code-bg};
+        --code-border: #{$tokyonight-moon-code-border};
+      }
   };
 }
 
-html[data-theme="dark"] { @include dark-appearance; }
-html[data-theme="light"] { @include light-appearance; }
+$theme-palette: "moon" !default;
+
+html[data-theme="dark"] { @include dark-appearance($theme-palette); }
+html[data-theme="light"] { @include light-appearance($theme-palette); }
 
 @media (prefers-color-scheme: dark) {
-  body[data-theme="auto"] { @include dark-appearance; }
+  body[data-theme="auto"] { @include dark-appearance($theme-palette); }
 }
 @media (prefers-color-scheme: light) {
-  body[data-theme="auto"] { @include light-appearance; }
+  body[data-theme="auto"] { @include light-appearance($theme-palette); }
 }
   
 // -------------------------------------------- //
@@ -230,6 +301,7 @@ noscript .theme-toggle { display: none; }
 mark {
   padding: 0.4em;
   background-color: var(--highlight);
+  color: var(--headings);
   font-size: 0.6em;
   letter-spacing: 1px;
 }
