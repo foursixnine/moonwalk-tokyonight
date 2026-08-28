@@ -28,7 +28,7 @@ project_entries:
 
   - title: Project 5
     url: overview-post
-    desc: Moonwalk also has horizontal list (used in header and footer)
+    desc: Tokyo Night also has horizontal list support for header and footer
     highlight: WIP
 
   - title: Project 6
@@ -45,9 +45,9 @@ old_project_entries:
     url: https://github.com/abhinavs/cookie
     desc: An open source landing website with supporting pages and integrated blog
 
-  - title: Moonwalk
-    url: https://github.com/abhinavs/moonwalk
-    desc: A fast and minimalist Jekyll blog theme with clean dark mode
+  - title: Tokyo Night
+    url: https://github.com/foursixnine/tokyonight
+    desc: A Tokyo Night-flavoured Jekyll theme for remote-theme use
 
   - title: Humangous
     url: https://www.humangous.co
@@ -83,7 +83,7 @@ misc_entries:
     post_list: true
     url: false
 
-  - title: moonwalk on the Internet
+  - title: tokyo night on the Internet
     url: false
     entries:
       - title: on Github

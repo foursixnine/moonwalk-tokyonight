@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+### Changed
+- Renamed the theme from Moonwalk to Tokyo Night for remote-theme-first usage
+- Switched local development dependency management to the `Gemfile` instead of `gemspec` loading through Bundler
+- Packaged `404.html` and `search.json` with the theme for remote-theme consumers
+- Simplified `_config.yml` to theme defaults instead of demo-site identity
+- Reduced `README.md` to minimal remote-theme setup while preserving attribution and model assistance notes
+
+
 ### Added
 - GitHub Markdown Alerts (admonitions) support - NOTE, TIP, IMPORTANT, WARNING, CAUTION
 - Light mode syntax highlighting with proper contrast
@@ -29,7 +37,7 @@
 - Soopr twitter handle now reads from `_config.yml` instead of being hardcoded
 - Tags in posts now link to tag archive page
 - Improved 404 page with minimal themed layout
-- Gemspec now includes `_data/` directory in packaged files
+- Gemspec now includes `_data/`, `404.html`, and `search.json` in packaged files
 
 ### Fixed
 - Undefined CSS variable `--border` in blockquote styles (now uses `--text`)

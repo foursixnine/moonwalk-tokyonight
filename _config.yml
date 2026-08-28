@@ -1,21 +1,15 @@
-title: Moonwalk
-author: Abhinav Saxena
-url: https://www.abhinavsaxena.com # root address of the site
-baseurl: "/moonwalk/" # set to "/moonwalk" if hosting under a project subpath
-description: > # description of the site (multiple lines allowed)
-  Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.
+title: Tokyo Night
+description: >
+  A Tokyo Night-flavoured Jekyll theme designed for remote-theme use.
 
 permalink: /:slug
 
 twitter:
-  username: abhinav # update or delete this
   card: summary_large_image
-
-#theme: moonwalk # if you are using GitHub Pages, change it to remote_theme: abhinavs/moonwalk
-remote_theme: abhinavs/moonwalk
 
 theme_config:
   appearance: "dark" # can be "light", "dark" or "auto"
+  palette: "moon" # currently supported: moon
   appearance_toggle: true # if appearance can be switched by user
   date_format: "%Y-%m-%d" # customize how date is formatted
   show_description: true # show blog description
@@ -43,31 +37,13 @@ theme_config:
     title_blog: Blog
     title_old_projects: Old Projects
 
-soopr:
-  publish_token: "" # sign up at https://www.soopr.co to get your publish token and personalize share and reaction options
-
 highlighter: rouge
 
 sass:
-  style: :compressed
+  style: compressed
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-markdown-output
-  - jekyll-llms-output
 
-# Emit a clean .md sibling for each post (e.g. /foo -> /foo.md) so AI agents
-# can fetch source Markdown instead of parsing HTML. Set enabled: false to disable.
-markdown_output:
-  collections: [posts]
-
-# Emit /llms.txt (curated index) and /llms-full.txt (full content) so agents
-# can discover and ingest the site. See https://llmstxt.org for the spec.
-llms_output:
-  index:
-    collections: [posts]
-  full:
-    collections: [posts]
-    respect_markdown_output: true

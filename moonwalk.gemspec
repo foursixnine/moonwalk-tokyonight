@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "moonwalk"
-  spec.version       = "0.3.0"
+  spec.version       = "0.3.1"
   spec.authors       = ["Abhinav Saxena"]
   spec.email         = ["abhinav061@gmail.com"]
 
@@ -15,7 +15,8 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll", "~> 4.3"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.17"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.7.3"
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8.0"
+  spec.add_runtime_dependency "jekyll-markdown-output"
   # spec.add_runtime_dependency "jekyll-markdown-output", "~> 0.1"
   # spec.add_runtime_dependency "jekyll-llms-output", "~> 0.1"
   spec.add_runtime_dependency "rouge", "~> 4.2"
