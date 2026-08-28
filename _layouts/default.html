@@ -13,15 +13,10 @@
         {% endif %}
         <div class="credits">
           {%- if site.theme_config.show_copyright == true -%}
+          <!-- No copyrights, only arepas -->
           &copy;&nbsp;{{ "now" | date: "%Y" }}&nbsp;{{site.author}}
           &nbsp;
-          •
-          &nbsp;
-          {%- endif -%}
-          {%- if site.soopr -%}
-          Powered by <a href="https://www.soopr.co" target="_blank" rel="noopener noreferrer">Soopr</a>
-          &nbsp;
-          •
+          🫓
           &nbsp;
           {%- endif -%}
           Based on <a href="https://github.com/abhinavs/moonwalk" target="_blank" rel="noopener noreferrer">Moonwalk</a> · Theme <a href="https://github.com/foursixnine/moonwalk-tokyonight" target="_blank" rel="noopener noreferrer">Moonwalk Tokyo Night</a>
@@ -47,14 +42,6 @@
 
     {%- if site.theme_config.show_back_to_top and page.layout == "post" -%}
       {% include back_to_top.html %}
-    {%- endif -%}
-
-    {%- if site.soopr -%}
-      {%- if site.soopr.publish_token and jekyll.environment == "production" -%}
-        <script async defer data-soopr-token="{{site.soopr.publish_token}}" src="https://sdk.soopr.co/soopr.js"></script>
-      {%- else -%}
-        <script async defer src="https://sdk.soopr.co/soopr.js"></script>
-      {%- endif -%}
     {%- endif -%}
   </body>
 </html>
