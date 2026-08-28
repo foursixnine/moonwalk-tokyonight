@@ -8,6 +8,7 @@
 - Packaged `404.html` and `search.json` with the theme for remote-theme consumers
 - Simplified `_config.yml` to theme defaults instead of demo-site identity
 - Reduced `README.md` to minimal remote-theme setup while preserving attribution and model assistance notes
+- Clarified that consuming sites using `github-pages` remain on the GitHub Pages Jekyll stack, while the theme repo can still be developed locally with a newer toolchain
 
 
 ### Added

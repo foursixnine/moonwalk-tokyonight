@@ -4,6 +4,19 @@ A minimal Jekyll theme adapted for clean remote-theme usage and styled around th
 
 ## Install
 
+### GitHub Pages / remote-theme consumer
+
+If your site uses the `github-pages` gem, it is pinned to the GitHub Pages Jekyll stack (currently Jekyll `3.10.0`). This theme is kept compatible with that stack.
+
+In your site’s `Gemfile`, keep `github-pages` and add `jekyll-remote-theme` if needed:
+
+```ruby
+source "https://rubygems.org"
+
+gem "github-pages", "~> 232", group: :jekyll_plugins
+gem "jekyll-remote-theme", group: :jekyll_plugins
+```
+
 In your site’s `_config.yml`:
 
 ```yml
@@ -34,4 +47,13 @@ The theme packages `404.html`, `search.json`, and a compatibility `assets/css/st
 
 ## Development
 
-Install with Bundler using the included `Gemfile` and run Jekyll as usual for local development.
+### Theme repository
+
+This repository can be developed locally with a newer Ruby/Bundler toolchain, but the shipped theme is intentionally kept compatible with the GitHub Pages consumer stack.
+
+Use the included `Gemfile` for local development:
+
+```sh
+bin/bootstrap
+bin/start
+```
