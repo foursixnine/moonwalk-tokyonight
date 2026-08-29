@@ -1,5 +1,7 @@
 # Moonwalk Tokyo Night
 
+[![Gem Version](https://badge.fury.io/rb/moonwalk-tokyonight.svg)](https://badge.fury.io/rb/moonwalk-tokyonight)
+
 A minimal Jekyll theme based on moonwalk by @abhinavs compatible with `jekyll-remote-theme` using [Tokyo Night](https://tokyonight.org/) as a color palette (specifically `moon` variant).
 
 ## Install
@@ -18,17 +20,16 @@ plugins:
   - jekyll-seo-tag
 ```
 
-### Might not be needed (ymmv, but I haven't yested yet)
+### via Gemfile
 
-In your site’s `Gemfile`, keep `github-pages` and add `jekyll-remote-theme` if needed:
-
+In your site’s `Gemfile` add the following
 ```ruby
 source "https://rubygems.org"
 
-gem "github-pages", "~> 232", group: :jekyll_plugins
-gem "jekyll-remote-theme", group: :jekyll_plugins
+gem 'moonwalk-tokyonight'
 ```
 
+## Customize your theme
 
 Optional theme settings:
 
@@ -38,6 +39,8 @@ theme_config:
   appearance_toggle: true
   palette: moon      # current Tokyo Night palette
 ```
+
+For now only Moon is supported.
 
 ## Notes
 
