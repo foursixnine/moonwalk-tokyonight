@@ -2,13 +2,19 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "moonwalk-tokyonight"
-  spec.version       = "0.1.0"
-  spec.authors       = ["Abhinav Saxena", "foursixnine"]
-
-  spec.summary       = "A Tokyo Night-flavoured Jekyll theme for remote-theme use."
+  spec.version       = "0.1.1"
+  spec.required_ruby_version = ">= 3.3"
+  spec.authors       = ["Santiago Zarate"]
+  spec.email         = ["rubygems@zarate.co"]
+  spec.summary       = "Minimalistic jekyll theme with Tokyo Night (moon) palette."
+  spec.description   = <<~DESC
+    A minimal Jekyll theme based on moonwalk by @abhinavs, compatible with `jekyll-remote-theme` using [Tokyo Night](https://tokyonight.org/) as a color palette (specifically `moon` variant).
+  DESC
   spec.homepage      = "https://github.com/foursixnine/moonwalk-tokyonight"
   spec.license       = "MIT"
-  spec.metadata["source_code_uri"] = "https://github.com/foursixnine/moonwalk-tokyonight"
+  spec.metadata = {
+    "bug_tracker_uri" => "https://github.com/foursixnine/moonwalk-tokyonight/issues"
+  }
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|
     f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml|404\.html|search\.json)!i)
