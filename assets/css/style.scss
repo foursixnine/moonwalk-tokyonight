@@ -1,8 +1,0 @@
----
----
-
-$theme-palette: "{{ site.theme_config.palette | default: 'moon' }}";
-
-@import "moonwalk-tokyonight";
-@import "list";
-@import "syntax";
