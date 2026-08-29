@@ -1,10 +1,8 @@
 name: Release Gem
-
 on:
   push:
     tags:
       - "v*"
-
 jobs:
   release:
     if: github.repository == 'foursixnine/moonwalk-tokyonight'
@@ -15,14 +13,11 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
           bundler-cache: true
-
       - uses: rubygems/configure-rubygems-credentials@v1.0.0
-
       - name: Build and push gem
         run: |
           gem build moonwalk-tokyonight.gemspec
