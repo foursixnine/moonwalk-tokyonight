@@ -5,6 +5,7 @@ description: >
 permalink: /:slug
 
 twitter:
+  username: foursixnine
   card: summary_large_image
 
 theme_config:
