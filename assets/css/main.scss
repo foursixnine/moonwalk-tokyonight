@@ -3,6 +3,12 @@
 
 $theme-palette: "{{ site.theme_config.palette | default: 'moon' }}";
 
-@use "moonwalk-tokyonight";
-@use "list";
-@use "syntax";
+{% if jekyll.version < "4.0.0" %}
+  {% assign scss_import = "import" %}
+{% else %}
+  {% assign scss_import = "use" %}
+{% endif %}
+
+@{{ scss_import }} "moonwalk-tokyonight";
+@{{ scss_import }} "list";
+@{{ scss_import }} "syntax";
