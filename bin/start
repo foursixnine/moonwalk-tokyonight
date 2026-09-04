@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 set -e
-
+source local-dev-environment.sh
 bundle exec jekyll serve --livereload "$@"

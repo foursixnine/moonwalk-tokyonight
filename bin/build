@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
 set -e
+source local-dev-environment.sh
 
-JEKYLL_ENV=production bundle exec jekyll build "$@"
+bundle exec jekyll build "$@"
