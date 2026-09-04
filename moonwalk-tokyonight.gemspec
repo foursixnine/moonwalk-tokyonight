@@ -8,7 +8,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["rubygems@zarate.co"]
   spec.summary       = "Minimalistic jekyll theme with Tokyo Night (moon) palette."
   spec.description   = <<~DESC
-    A minimal Jekyll theme based on moonwalk by @abhinavs, compatible with `jekyll-remote-theme` using [Tokyo Night](https://tokyonight.org/) as a color palette (specifically `moon` variant).
+    A minimal Jekyll theme based on moonwalk by @abhinavs, compatible with jekyll-remote-theme using
+    Tokyo Night as a color palette, specifically Moon variant is implemented for now.
   DESC
   spec.homepage      = "https://github.com/foursixnine/moonwalk-tokyonight"
   spec.license       = "MIT"
@@ -24,6 +25,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-feed", "~> 0.17"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
-  spec.add_runtime_dependency "rouge", ">= 4.2", "< 6.0"
-  spec.add_runtime_dependency "webrick", "~> 1.8"
+  spec.add_development_dependency "rouge", "~> 4.2"
+  spec.add_development_dependency "webrick", "~> 1.8"
 end
