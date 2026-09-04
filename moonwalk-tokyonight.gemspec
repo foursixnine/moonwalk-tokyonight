@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "moonwalk-tokyonight"
-  spec.version       = "0.1.1"
+  spec.version       = "0.1.2"
   spec.required_ruby_version = ">= 3.3"
   spec.authors       = ["Santiago Zarate"]
   spec.email         = ["rubygems@zarate.co"]
