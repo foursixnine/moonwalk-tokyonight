@@ -1,10 +1,11 @@
 <ul class="horizontal-list">
   {% for item in include.collection %}
+  {% assign rel = "" %}
+  {% if item.me %}
+  {% capture rel %} rel="me"{% endcapture %}
+  {% endif %}
     <li>
-      <a href="{{ item.url }}">
-        {{ item.title }}
-      </a>
-      &nbsp;&nbsp;
+      <a {{ rel }}href="{{ item.url }}">{{ item.title }}</a>&nbsp;&nbsp;
     </li>
   {% endfor %}
 </ul>
